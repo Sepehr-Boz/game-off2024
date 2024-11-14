@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6955788850860543218}
   - component: {fileID: 694173811710648899}
   - component: {fileID: 3306810298289424251}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2559,9 +2559,9 @@ GameObject:
   - component: {fileID: 2320223510189751510}
   - component: {fileID: 9096289967542562085}
   - component: {fileID: 4138411185402754299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LevelTemplate
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
