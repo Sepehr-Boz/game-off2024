@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7414338104289269973, guid: d8b76c00216d2934da7774cea906c74f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9187103156130781859, guid: d8b76c00216d2934da7774cea906c74f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -549,9 +553,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6225118617218178832, guid: 70f9a2f01a4276f418b09f4d54cd2790, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7409143549301473154, guid: 70f9a2f01a4276f418b09f4d54cd2790, type: 3}
       propertyPath: m_Name
       value: LevelTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409143549301473154, guid: 70f9a2f01a4276f418b09f4d54cd2790, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
