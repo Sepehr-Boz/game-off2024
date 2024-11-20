@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -36,27 +37,19 @@ public class EnemyController : MonoBehaviour
 
         if (view.player != null)
         {
-            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position +
-            (new Vector2(view.player.transform.position.x - transform.position.x, 0) * moveSpeed * Time.deltaTime));
-
-            if (Vector2.Distance(transform.position, view.player.transform.position) <= 3.5f)
-            {
-                // attack player
-                // jump back
-                JumpBack();
-            }
+            GetComponent<Rigidbody2D>().AddForceX((view.player.transform.position.x - transform.position.x) * 100 * moveSpeed * Time.deltaTime);
+            //GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position +
+            //(new Vector2(view.player.transform.position.x - transform.position.x, 0) * moveSpeed * Time.deltaTime));
         }
         // GetComponent<Rigidbody2D>().linearVelocityX = (view.player.transform.position.x - transform.position.x) * moveSpeed * Time.deltaTime;
         else
         {
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * 100 * moveSpeed * Time.deltaTime, ForceMode2D.Force);
             // GetComponent<Rigidbody2D>().linearVelocityX = moveDir.x * moveSpeed * Time.deltaTime;
-            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + (moveDir * moveSpeed * Time.deltaTime));
+            // GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + (moveDir * moveSpeed * Time.deltaTime));
             // check if collided with a vertical wall, if so then change the x direction to the opposite
             // throw out raycast in the direction moving in to see if hit wall/about to hit wall
-            RaycastHit2D rayHit = Physics2D.Raycast((Vector2)transform.position + moveDir, moveDir, 0.1f);
-            Debug.DrawLine((Vector2)transform.position + moveDir, (Vector2)transform.position + (moveDir * 1.1f), Color.green, 0.1f);
-            if (rayHit && rayHit.transform.CompareTag("Wall"))
-                ChangeDirection();
+            ChangeDirection();
         }
     }
 
@@ -67,13 +60,24 @@ public class EnemyController : MonoBehaviour
         // return (rayHit && rayHit.transform.CompareTag("Wall"));
     }
 
-    private void JumpBack()
+    protected virtual void JumpBack()
     {
         GetComponent<Rigidbody2D>().AddForce(new Vector2(-moveDir.x * moveSpeed, 1) * moveSpeed, ForceMode2D.Impulse);
     }
 
     protected virtual void ChangeDirection()
     {
-        moveDir.x = -moveDir.x;
+        RaycastHit2D rayHit = Physics2D.Raycast((Vector2)transform.position + moveDir, moveDir, 0.1f, LayerMask.NameToLayer("Enemy"));
+        print(rayHit.collider.gameObject.name);
+        Debug.DrawLine((Vector2)transform.position + moveDir, (Vector2)transform.position + (moveDir * 1.1f), Color.green, 0.1f);
+
+        if (rayHit && rayHit.collider.CompareTag("Wall"))
+            moveDir.x = -moveDir.x;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            JumpBack();
     }
 }

@@ -53,8 +53,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7565118349008221571, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565118349008221571, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7565118349008221571, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_GravityScale
@@ -99,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   damage: 1
-  moveSpeed: 1
+  moveSpeed: 3
   visionRadius: 5
   attackCooldown: 0.05
   view: {fileID: 6542788269754007203}
