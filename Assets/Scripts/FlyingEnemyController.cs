@@ -24,7 +24,7 @@ public class FlyingEnemyController : EnemyController
             //GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + (moveDir * moveSpeed * Time.deltaTime));
             // check if collided with a vertical wall, if so then change the x direction to the opposite
             // throw out raycast in the direction moving in to see if hit wall/about to hit wall
-            ChangeDirection();
+            // ChangeDirection();
         }
     }
 
@@ -49,6 +49,8 @@ public class FlyingEnemyController : EnemyController
             moveDir.x = 1;
         else if (rightRay && rightRay.collider.CompareTag("Wall"))
             moveDir.x = -1;
+
+        StartCoroutine(BoostMoveAtStart());
     }
 
     protected override void JumpBack()
@@ -60,5 +62,7 @@ public class FlyingEnemyController : EnemyController
     {
         if (other.gameObject.CompareTag("Player"))
             JumpBack();
+        else if (other.gameObject.CompareTag("Wall"))
+            ChangeDirection();
     }
 }
