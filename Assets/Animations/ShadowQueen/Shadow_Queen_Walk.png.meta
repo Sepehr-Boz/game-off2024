@@ -463,24 +463,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< HEAD:Assets/Animations/ShadowQueen/Shadow_Queen_Walk.png.meta
-      Shadow_Queen_Walk_18: -2001275819
-=======
-      Shadow_Tank_0: 3252983456660903324
-      Shadow_Tank_1: -4631482981442366180
-      Shadow_Tank_10: -7796409442020949856
-      Shadow_Tank_11: -4396068217179097438
-      Shadow_Tank_12: -9203220597436371809
-      Shadow_Tank_13: 8289427636253886688
-      Shadow_Tank_2: -5353487946940219548
-      Shadow_Tank_3: 7785319479450600853
-      Shadow_Tank_4: -3127072662823907426
-      Shadow_Tank_5: -6945046281811385365
-      Shadow_Tank_6: -5588493191129821828
-      Shadow_Tank_7: 1399304857081251111
-      Shadow_Tank_8: -3844796491339026758
-      Shadow_Tank_9: -169402657130762966
->>>>>>> 752eac389773460326f3b0320556dabebabbd42f:Assets/Prefabs/Shadow_Tank.png.meta
+      Shadow_Queen_Walk_10: -2077440462422112448
+      Shadow_Queen_Walk_11: 3948973307562758968
+      Shadow_Queen_Walk_12: -2832091841299991396
+      Shadow_Queen_Walk_13: 8540385940945100996
+      Shadow_Queen_Walk_14: 1093738731884850371
+      Shadow_Queen_Walk_15: -589560142623728296
+      Shadow_Queen_Walk_16: -1090059160010705711
+      Shadow_Queen_Walk_17: 977369907211276202
+      Shadow_Queen_Walk_5: 4261080339987381614
+      Shadow_Queen_Walk_6: 3853754512116942182
+      Shadow_Queen_Walk_7: -609854666738763759
+      Shadow_Queen_Walk_8: -7110702916660175436
+      Shadow_Queen_Walk_9: -2397764168098090142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

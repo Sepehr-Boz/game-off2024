@@ -38,21 +38,25 @@ public class RangedEnemyController : EnemyController
             GetComponent<Animator>().SetBool("isAttacking", false);
             GetComponent<Animator>().SetBool("isWalking", true);
 
-            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * 100 * moveSpeed * Time.deltaTime, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
             ChangeDirection();
         }
 
 
         // min max the velocity to only go up to 5
         if (GetComponent<Rigidbody2D>().linearVelocityX > 0)
-            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, 5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -moveSpeed);
 
         if (GetComponent<Rigidbody2D>().linearVelocityY > 0)
-            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, 5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -moveSpeed);
+
+        GetComponent<SpriteRenderer>().flipX = view.player != null
+            ? view.player.transform.position.x < transform.position.x
+            : moveDir.x < 0;
     }
 
     private IEnumerator Cooldown()

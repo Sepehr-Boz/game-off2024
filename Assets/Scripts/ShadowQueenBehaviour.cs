@@ -24,21 +24,21 @@ public class ShadowQueenBehaviour : EnemyController
 
         // min max the velocity to only go up to 5
         if (GetComponent<Rigidbody2D>().linearVelocityX > 0)
-            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, 5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -moveSpeed);
 
         if (GetComponent<Rigidbody2D>().linearVelocityY > 0)
-            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, 5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -moveSpeed);
     }
 
     protected override void ChangeDirection()
     {
-        RaycastHit2D rayHit = Physics2D.Raycast((Vector2)transform.position - new Vector2(0, 1), moveDir, 2f, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D rayHit = Physics2D.Raycast((Vector2)transform.position, moveDir, 2f, LayerMask.NameToLayer("Enemy"));
         // print(rayHit.collider.gameObject.name);
-        Debug.DrawLine((Vector2)transform.position - new Vector2(0, 1), (Vector2)transform.position + moveDir, Color.green, 0.1f);
+        Debug.DrawLine((Vector2)transform.position, (Vector2)transform.position + moveDir, Color.green, 0.1f);
 
         if (rayHit && rayHit.collider.CompareTag("Wall"))
         {
@@ -56,6 +56,9 @@ public class ShadowQueenBehaviour : EnemyController
                     // print("x");
                     GetComponent<Collider2D>().isTrigger = true;
                     GetComponent<Rigidbody2D>().gravityScale = 0;
+                    break;
+                case 3:
+                    moveDir.x = moveDir.x != 0 ? -moveDir.x : 1;
                     break;
                 default:
                     break;
@@ -98,7 +101,7 @@ public class ShadowQueenBehaviour : EnemyController
                 GetComponent<Animator>().SetBool("isWalking", true);
             }
 
-            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * 100 * Time.deltaTime);
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
             GetComponent<SpriteRenderer>().flipX = moveDir.x < 0;
 
             ChangeDirection();
@@ -125,7 +128,7 @@ public class ShadowQueenBehaviour : EnemyController
                 GetComponent<Animator>().SetBool("isWalking", true);
             }
 
-            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * 100 * Time.deltaTime);
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
             GetComponent<SpriteRenderer>().flipX = moveDir.x < 0;
             ChangeDirection();
 
@@ -141,22 +144,26 @@ public class ShadowQueenBehaviour : EnemyController
         // play laser attack animation, on the end laser shot spawn in some colliders at where the lasers hit
         // turn around when hit walls
 
-        phase = 2;
         // move THROUGH player, attacking while dashing through, then turn around on walls hit
         while ((float)hp / (float)maxHP < 0.3f)
         {
-            if (view.player != null)
+            if (view.player != null && view.player.transform.position.x + visionRadius - 1 - transform.position.x > 0)
             {
                 GetComponent<Animator>().SetBool("isRanged", true);
+                transform.Find("Hit").gameObject.SetActive(true);
+                moveDir.x = 0;
             }
             else
             {
                 GetComponent<Animator>().SetBool("isRanged", false);
                 GetComponent<Animator>().SetBool("isWalking", true);
+                transform.Find("Hit").gameObject.SetActive(false);
+                moveDir.x = moveDir.x == 0 ? 1 : moveDir.x;
             }
 
             // keep facing the player
-            GetComponent<SpriteRenderer>().flipX = view.player ?? view.player.transform.position.x < transform.position.x;
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+            GetComponent<SpriteRenderer>().flipX = view.player != null ? view.player.transform.position.x < transform.position.x : moveDir.x < 0;
             ChangeDirection();
 
             yield return new WaitForEndOfFrame();

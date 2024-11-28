@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8118553191842415837
 Transform:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2.05}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
 --- !u!1001 &2975995077634495576
 PrefabInstance:
@@ -104,15 +104,15 @@ PrefabInstance:
       objectReference: {fileID: -7480313374336886407, guid: 0fd25626eb8c26a4683c36e03dc272e4, type: 3}
     - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_LocalPosition.x

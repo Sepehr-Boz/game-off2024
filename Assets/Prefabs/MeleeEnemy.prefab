@@ -352,8 +352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  maxHP: 10
   damage: 1
-  moveSpeed: 5
+  moveSpeed: 4
   visionRadius: 5
   attackCooldown: 0.05
   view: {fileID: 9152430593542358626}

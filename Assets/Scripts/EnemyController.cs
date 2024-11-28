@@ -67,7 +67,8 @@ public class EnemyController : MonoBehaviour
 
         if (view.player != null)
         {
-            GetComponent<Rigidbody2D>().AddForceX((view.player.transform.position.x - transform.position.x) * 100 * moveSpeed * Time.deltaTime);
+            GetComponent<Rigidbody2D>().AddForceX((view.player.transform.position.x - transform.position.x < 0 ? -1 : 1)
+             * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
             GetComponent<Animator>().SetBool("isAttacking", true);
 
             // if see player then face towards the player, stay still and shoot
@@ -79,7 +80,7 @@ public class EnemyController : MonoBehaviour
         // GetComponent<Rigidbody2D>().linearVelocityX = (view.player.transform.position.x - transform.position.x) * moveSpeed * Time.deltaTime;
         else
         {
-            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * 100 * moveSpeed * Time.deltaTime, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForceX(moveDir.x * 100 * Time.deltaTime, ForceMode2D.Impulse);
             GetComponent<Animator>().SetBool("isAttacking", false);
             GetComponent<Animator>().SetBool("isWalking", true);
             // StartCoroutine(IterateThroughSprites(walking));
@@ -99,14 +100,14 @@ public class EnemyController : MonoBehaviour
 
         // min max the velocity to only go up to 5
         if (GetComponent<Rigidbody2D>().linearVelocityX > 0)
-            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, 5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.min(GetComponent<Rigidbody2D>().linearVelocityX, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -5);
+            GetComponent<Rigidbody2D>().linearVelocityX = math.max(GetComponent<Rigidbody2D>().linearVelocityX, -moveSpeed);
 
         if (GetComponent<Rigidbody2D>().linearVelocityY > 0)
-            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, 5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.min(GetComponent<Rigidbody2D>().linearVelocityY, moveSpeed);
         else
-            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -5);
+            GetComponent<Rigidbody2D>().linearVelocityY = math.max(GetComponent<Rigidbody2D>().linearVelocityY, -moveSpeed);
     }
 
     protected bool IsFalling()
