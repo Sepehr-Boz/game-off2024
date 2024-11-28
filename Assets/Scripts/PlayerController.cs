@@ -1,11 +1,5 @@
 using System.Collections;
-using System.Linq;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Tilemaps;
-using UnityEditor;
 
 public class PlayerController : MonoBehaviour
 {
@@ -70,6 +64,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
+        if (isGrounded && dir.y > 0)
         if (isGrounded && dir.y > 0)
         {
             rigidbody2D.linearVelocityY = dir.y * JumpVelocity;
@@ -167,6 +162,9 @@ public class PlayerController : MonoBehaviour
     //         yield return new WaitForSeconds(seconds);
     //         obj.enabled = true;
     //     }
+    // void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     isGrounded = true;
     // void OnCollisionEnter2D(Collision2D other)
     // {
     //     isGrounded = true;
