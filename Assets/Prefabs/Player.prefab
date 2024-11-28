@@ -114,10 +114,8 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
   m_Constraints: 4
 --- !u!61 &2828350439112948673
 BoxCollider2D:
@@ -179,5 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveVelocity: 7.5
   JumpVelocity: 10
-  maxRayDist: 1
+  DropDisableTime: 0.3
+  MaxRayDistance: 0.6
+  DownRayOffset: 0.35
   DebugRays: 1
