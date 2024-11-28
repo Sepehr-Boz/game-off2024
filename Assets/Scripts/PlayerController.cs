@@ -83,8 +83,7 @@ public class PlayerController : MonoBehaviour
 
     void FallDownPlatform()
     {
-        
-        IEnumerator DisableForSeconds(float seconds, TilemapCollider2D col)
+        IEnumerator DisableForSeconds(float seconds, Collider2D col)
         {
             col.enabled = false;
             yield return new WaitForSeconds(seconds);
@@ -92,31 +91,44 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        GameObject[] roots = SceneManager.GetActiveScene().GetRootGameObjects();
+        StartCoroutine(DisableForSeconds(0.5f, GetComponent<Collider2D>()));
 
-        GameObject grid = null;
-        foreach (GameObject root in roots)
-        {
-            if (root.name == "Grid")
-            {
-                grid = root;
-                break;
-            }
-        }
 
-        foreach (Transform template in grid.transform)
-        {
-            foreach (Transform layer in template)
-            {
-                if (!layer.GetComponent<PlatformEffector2D>())
-                    continue;
 
-                if (layer.name == "Platforms")
-                {
-                    StartCoroutine(DisableForSeconds(1f, layer.GetComponent<TilemapCollider2D>()));
-                }
-            }
-        }
+
+        // IEnumerator DisableForSeconds(float seconds, TilemapCollider2D col)
+        // {
+        //     col.enabled = false;
+        //     yield return new WaitForSeconds(seconds);
+        //     col.enabled = true;
+        // }
+
+
+        // GameObject[] roots = SceneManager.GetActiveScene().GetRootGameObjects();
+
+        // GameObject grid = null;
+        // foreach (GameObject root in roots)
+        // {
+        //     if (root.name == "Grid")
+        //     {
+        //         grid = root;
+        //         break;
+        //     }
+        // }
+
+        // foreach (Transform template in grid.transform)
+        // {
+        //     foreach (Transform layer in template)
+        //     {
+        //         if (!layer.GetComponent<PlatformEffector2D>())
+        //             continue;
+
+        //         if (layer.name == "Platforms")
+        //         {
+        //             StartCoroutine(DisableForSeconds(1f, layer.GetComponent<TilemapCollider2D>()));
+        //         }
+        //     }
+        // }
     }
 
 
