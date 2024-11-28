@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: bacdf5b8f24bb214dac4c25c71bdcdc7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3205086977366163386
+    second: Raider_Gunner_Shoot_0
+  - first:
+      213: 9046336379520380243
+    second: Raider_Gunner_Shoot_1
+  - first:
+      213: -8815500786925004980
+    second: Raider_Gunner_Shoot_2
+  - first:
+      213: -2835910683978973584
+    second: Raider_Gunner_Shoot_3
+  - first:
+      213: 8222494522066032764
+    second: Raider_Gunner_Shoot_4
+  - first:
+      213: -7682003851671057116
+    second: Raider_Gunner_Shoot_5
+  - first:
+      213: 3222005920877597524
+    second: Raider_Gunner_Shoot_6
+  - first:
+      213: 34547471383303943
+    second: Raider_Gunner_Shoot_7
+  - first:
+      213: -2730307670320196550
+    second: Raider_Gunner_Shoot_8
+  - first:
+      213: -231463181171244269
+    second: Raider_Gunner_Shoot_9
+  - first:
+      213: 4461517935415644730
+    second: Raider_Gunner_Shoot_10
+  - first:
+      213: 1109303122123803254
+    second: Raider_Gunner_Shoot_11
+  - first:
+      213: 1390930940683066644
+    second: Raider_Gunner_Shoot_12
+  - first:
+      213: 7091054997800173834
+    second: Raider_Gunner_Shoot_13
+  - first:
+      213: 2178891800723059415
+    second: Raider_Gunner_Shoot_14
+  - first:
+      213: -1131036643678363178
+    second: Raider_Gunner_Shoot_15
+  - first:
+      213: -9178304200072674072
+    second: Raider_Gunner_Shoot_16
+  - first:
+      213: -1215071510411498425
+    second: Raider_Gunner_Shoot_17
+  - first:
+      213: 6715179207237795578
+    second: Raider_Gunner_Shoot_18
+  - first:
+      213: -4151509709948326068
+    second: Raider_Gunner_Shoot_19
+  - first:
+      213: -7688537454769287226
+    second: Raider_Gunner_Shoot_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 34
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6400cd7106e3583d0800000000000000
+      internalID: -3205086977366163386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 34
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d6104f10b0b8d70800000000000000
+      internalID: 9046336379520380243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 35
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c479826adbc09a580800000000000000
+      internalID: -8815500786925004980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 34
+        width: 103
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42dc6f9a23a046590800000000000000
+      internalID: -7682003851671057116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 34
+        width: 107
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67acb6eef49056f00800000000000000
+      internalID: 1109303122123803254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_14
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 34
+        width: 108
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2fb1a6c8afc3e10800000000000000
+      internalID: 2178891800723059415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_15
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 34
+        width: 104
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1e9914a20cd40f0800000000000000
+      internalID: -1131036643678363178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_16
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 34
+        width: 115
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4413275fc10a080800000000000000
+      internalID: -9178304200072674072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_17
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 34
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ca93526e2332fe0800000000000000
+      internalID: -1215071510411498425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_18
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 34
+        width: 44
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe7f7219eb113d50800000000000000
+      internalID: 6715179207237795578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_19
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 34
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fe1f81aefd266c0800000000000000
+      internalID: -4151509709948326068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raider_Gunner_Shoot_20
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 34
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfc036abe3dc4590800000000000000
+      internalID: -7688537454769287226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 58b1de5c642d62244a5dcaa24095c861
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Raider_Gunner_Shoot_0: -3205086977366163386
+      Raider_Gunner_Shoot_1: 9046336379520380243
+      Raider_Gunner_Shoot_11: 1109303122123803254
+      Raider_Gunner_Shoot_13: 7091054997800173834
+      Raider_Gunner_Shoot_14: 2178891800723059415
+      Raider_Gunner_Shoot_15: -1131036643678363178
+      Raider_Gunner_Shoot_16: -9178304200072674072
+      Raider_Gunner_Shoot_17: -1215071510411498425
+      Raider_Gunner_Shoot_18: 6715179207237795578
+      Raider_Gunner_Shoot_19: -4151509709948326068
+      Raider_Gunner_Shoot_2: -8815500786925004980
+      Raider_Gunner_Shoot_20: -7688537454769287226
+      Raider_Gunner_Shoot_5: -7682003851671057116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

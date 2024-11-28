@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 4533d56f0f7c3b44eba4e027a840b011
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3293302236553335350
+    second: Shadow_Queen_Slide_Tackle_0
+  - first:
+      213: 6885621831030049166
+    second: Shadow_Queen_Slide_Tackle_1
+  - first:
+      213: -4455871783631408336
+    second: Shadow_Queen_Slide_Tackle_2
+  - first:
+      213: 6837307941962881432
+    second: Shadow_Queen_Slide_Tackle_3
+  - first:
+      213: -4005378813214322670
+    second: Shadow_Queen_Slide_Tackle_4
+  - first:
+      213: -8276903075420049565
+    second: Shadow_Queen_Slide_Tackle_5
+  - first:
+      213: -2639379316352731498
+    second: Shadow_Queen_Slide_Tackle_6
+  - first:
+      213: 6017994100448016768
+    second: Shadow_Queen_Slide_Tackle_7
+  - first:
+      213: 2562146216455948711
+    second: Shadow_Queen_Slide_Tackle_8
+  - first:
+      213: 7128731293213036792
+    second: Shadow_Queen_Slide_Tackle_9
+  - first:
+      213: -2021970572105654267
+    second: Shadow_Queen_Slide_Tackle_10
+  - first:
+      213: -1715975794674419385
+    second: Shadow_Queen_Slide_Tackle_11
+  - first:
+      213: -7354556405641571438
+    second: Shadow_Queen_Slide_Tackle_12
+  - first:
+      213: 6177942973331311200
+    second: Shadow_Queen_Slide_Tackle_13
+  - first:
+      213: -8727805118819440932
+    second: Shadow_Queen_Slide_Tackle_14
+  - first:
+      213: 6844822627999821572
+    second: Shadow_Queen_Slide_Tackle_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 18
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632d2cb7fe824bd20800000000000000
+      internalID: 3293302236553335350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 18
+        width: 58
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e898830e294ae8f50800000000000000
+      internalID: 6885621831030049166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 18
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033b6f398309922c0800000000000000
+      internalID: -4455871783631408336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 18
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89997acf85ff2ee50800000000000000
+      internalID: 6837307941962881432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 18
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2101c77d0390a68c0800000000000000
+      internalID: -4005378813214322670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 18
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fef3d7188822d80800000000000000
+      internalID: -8276903075420049565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 18
+        width: 97
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696384dee7a0f5bd0800000000000000
+      internalID: -2639379316352731498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_7
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 18
+        width: 71
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089b999efb5348350800000000000000
+      internalID: 6017994100448016768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_8
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 18
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9c776b8629e8320800000000000000
+      internalID: 2562146216455948711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_9
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 18
+        width: 75
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f09c2f67575ee260800000000000000
+      internalID: 7128731293213036792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_10
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 18
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500695f3a7480f3e0800000000000000
+      internalID: -2021970572105654267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_11
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 18
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749334b3b11af28e0800000000000000
+      internalID: -1715975794674419385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_12
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 18
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29319294aed5fe990800000000000000
+      internalID: -7354556405641571438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_13
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 18
+        width: 58
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a8800f6667cb550800000000000000
+      internalID: 6177942973331311200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_14
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 18
+        width: 51
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd66eef7c7b90e680800000000000000
+      internalID: -8727805118819440932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Queen_Slide_Tackle_15
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 18
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f2c7c2ae1bdfe50800000000000000
+      internalID: 6844822627999821572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
