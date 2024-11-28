@@ -1,61 +1,67 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1;
-    [SerializeField] private float jumpForce = 1;
+    [SerializeField] private float moveSpeed = 7.5f;
+    [SerializeField] private float jumpSpeed = 7.5f;
+    [SerializeField] private float gravity = 1;
+    [SerializeField] private float fallingGravity = 3;
+    [SerializeField] private float revJumpMult = 1.5f;
 
-    private bool canJumpMove = true;
+    private Vector2 dir;
+    private Vector2 absDir;
+    private bool canJump = true;
 
     private Rigidbody2D rigidbody2D;
 
     void Start()
     {
-        if (!rigidbody2D)
-            rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private Vector2 getInput()
+    {
+        return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleInputs();
-    }
+        dir = getInput();
+        absDir = dir.Abs();
 
-    private void HandleInputs()
-    {
-        // if cant move then break out
-        if (!canJumpMove)
-            return;
-
-
-        Vector2 dir = new Vector2(
-            Input.GetAxis("Horizontal"),
-            Input.GetAxis("Vertical")
-        );
-
-        // if the direction upwards >= 0 then jump
-        if (dir.y > 0)
+        // move
+        if (absDir.x > 0)
         {
-            Jump(dir);
+            rigidbody2D.linearVelocityX = dir.x * moveSpeed;
         }
         else
-            Move(dir);
-    }
+        {
+            rigidbody2D.linearVelocityX = 0;
+        }
 
-    private void Jump(Vector2 dir)
-    {
-        rigidbody2D.AddForce(dir * jumpForce);
+        // jump
+        if (canJump && dir.y > 0)
+        {
+            rigidbody2D.linearVelocityY = dir.y * jumpSpeed;
+            canJump = false;
+        }
 
-    }
-
-    private void Move(Vector2 dir)
-    {
-        rigidbody2D.MovePosition((Vector2)transform.position + new Vector2(dir.x, 0));
+        // increase gravity when falling/when down pressed
+        if ((rigidbody2D.linearVelocityY < 0 || dir.y < 0) && !canJump)
+        {
+            rigidbody2D.gravityScale = fallingGravity * (dir.y < 0 ? revJumpMult : 1);
+        }
+        else
+        {
+            rigidbody2D.gravityScale = gravity;
+        }
     }
 
     // on hitting the ground again then set can move true again
     void OnCollisionEnter2D(Collision2D other)
     {
-        canJumpMove = true;
+        canJump = true;
     }
 }

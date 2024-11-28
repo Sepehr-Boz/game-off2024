@@ -147,6 +147,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -450,7 +463,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< HEAD:Assets/Animations/ShadowQueen/Shadow_Queen_Walk.png.meta
       Shadow_Queen_Walk_18: -2001275819
+=======
+      Shadow_Tank_0: 3252983456660903324
+      Shadow_Tank_1: -4631482981442366180
+      Shadow_Tank_10: -7796409442020949856
+      Shadow_Tank_11: -4396068217179097438
+      Shadow_Tank_12: -9203220597436371809
+      Shadow_Tank_13: 8289427636253886688
+      Shadow_Tank_2: -5353487946940219548
+      Shadow_Tank_3: 7785319479450600853
+      Shadow_Tank_4: -3127072662823907426
+      Shadow_Tank_5: -6945046281811385365
+      Shadow_Tank_6: -5588493191129821828
+      Shadow_Tank_7: 1399304857081251111
+      Shadow_Tank_8: -3844796491339026758
+      Shadow_Tank_9: -169402657130762966
+>>>>>>> 752eac389773460326f3b0320556dabebabbd42f:Assets/Prefabs/Shadow_Tank.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

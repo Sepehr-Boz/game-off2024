@@ -156,6 +156,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -437,6 +450,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< HEAD:Assets/Animations/RangedRaider/Raider_Gunner_Shoot.png.meta
       Raider_Gunner_Shoot_0: -3205086977366163386
       Raider_Gunner_Shoot_1: 9046336379520380243
       Raider_Gunner_Shoot_11: 1109303122123803254
@@ -450,6 +464,20 @@ TextureImporter:
       Raider_Gunner_Shoot_2: -8815500786925004980
       Raider_Gunner_Shoot_20: -7688537454769287226
       Raider_Gunner_Shoot_5: -7682003851671057116
+=======
+      Recharge_0: 2565898361405630547
+      Recharge_1: -7071882625791699072
+      Recharge_10: 2038956944206017866
+      Recharge_11: -7319649063365450777
+      Recharge_2: 1979633482553230243
+      Recharge_3: -9190982306758379406
+      Recharge_4: -6105737783497256329
+      Recharge_5: -7911385633233392658
+      Recharge_6: -2858873188552748054
+      Recharge_7: -3858888708009446642
+      Recharge_8: -2007645627045220587
+      Recharge_9: 1677427978480382438
+>>>>>>> 752eac389773460326f3b0320556dabebabbd42f:Assets/Prefabs/Recharge.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
