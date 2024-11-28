@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GameOff2024.sln"
+    "dotnet.defaultSolution": "game-off2024.sln"
 }

@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4096176478084935479}
   - component: {fileID: 8683256702330575731}
   - component: {fileID: 9152430593542358626}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
