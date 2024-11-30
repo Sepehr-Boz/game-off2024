@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Raider_Melee_Running_0: 7750667647620156611
+      Raider_Melee_Running_1: -7436469098214681747
+      Raider_Melee_Running_2: -3989124076741844233
+      Raider_Melee_Running_3: 6413962200301169836
+      Raider_Melee_Running_4: -5430711871669183953
+      Raider_Melee_Running_5: -5235548039811044527
+      Raider_Melee_Running_6: -275920439507629235
+      Raider_Melee_Running_7: -4428055184131066276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

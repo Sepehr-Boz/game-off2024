@@ -1,28 +1,38 @@
+using System;
 using System.Collections;
-using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 7.5f;
-    [SerializeField] private float jumpSpeed = 7.5f;
-    [SerializeField] private float gravity = 1;
-    [SerializeField] private float fallingGravity = 3;
-    [SerializeField] private float revJumpMult = 1.5f;
+    [SerializeField] private float MoveVelocity = 7.5f;
+    [SerializeField] private float JumpVelocity = 10f;
+    [SerializeField] private float DropDisableTime = 0.3f;
+    [SerializeField] private float MaxRayDistance = 0.6f;
+    [SerializeField] private float DownRayOffset = 0.35f;
+    [SerializeField] private bool DebugRays = true;
 
     private Vector2 dir;
-    private Vector2 absDir;
-    private bool canJump = true;
+    private Vector2 rayDir = Vector2.down;
+    private bool isGrounded = true;
     private bool canFall = false;
+    private RaycastHit2D[] hits;
+    private string[] rayLayerNames = {"Wall", "Enemy", "Platform"};
+    private int platformLayer;
+    private int[] rayLayers;
+    private int hitLayer;
 
-    private Rigidbody2D rigidbody2D;
+    private new Rigidbody2D rigidbody2D;
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+        // convert layer names to layers
+        platformLayer = LayerMask.NameToLayer("Platform");
+
+        rayLayers = new int[rayLayerNames.Length];
+        for (int i = 0; i < rayLayerNames.Length; i++) rayLayers[i] = LayerMask.NameToLayer(rayLayerNames[i]);
     }
 
     private Vector2 getInput()
@@ -34,51 +44,74 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         dir = getInput();
-        absDir = dir.Abs();
+    }
 
-        // move
-        if (absDir.x > 0)
+    // raycast all with debug line if enabled
+    private RaycastHit2D[] debugRayCastAll(Vector3 pos, Vector2 dir, float maxDist)
+    {
+        if (DebugRays) Debug.DrawLine(pos, pos + (Vector3) dir * maxDist, Color.red);// debug line
+        return Physics2D.RaycastAll((Vector2) pos, dir, maxDist);// get all hits from raycast
+    }
+
+    // compares hit collider layer to whitelist layer array (returns if platform below)
+    private bool checkBelow(Vector2 offset)
+    {
+        foreach (RaycastHit2D hit in debugRayCastAll((Vector2) transform.position + offset, rayDir, MaxRayDistance))
         {
-            rigidbody2D.linearVelocityX = dir.x * moveSpeed;
+            // check hit layer
+            hitLayer = hit.collider.gameObject.layer;
+            foreach (int layer in rayLayers)
+            {
+                // valid layer player can jump off
+                if (hitLayer == layer)
+                {
+                    isGrounded = true;
+                    // if layer is platform allow falling through
+                    if (hitLayer == platformLayer)
+                    {
+                        canFall = true;
+                        return true;
+                    }
+                    break;
+                }
+            }
+            if (isGrounded) break;// if already grounded no point checking other hits
         }
-        else
+        return false;
+    }
+
+    // fixed update (kinda for physics)
+    void FixedUpdate()
+    {
+        // move
+        rigidbody2D.linearVelocityX = dir.x * MoveVelocity;
+        
+        // start with disabled to stop in-air jump
+        isGrounded = false;
+        canFall = false;
+
+        // ray cast below to check for ground/platform
+        bool platL = checkBelow(new Vector2(-DownRayOffset, 0));// down left
+        bool platR = checkBelow(new Vector2(DownRayOffset, 0));// down right
+        bool platM = checkBelow(Vector2.zero);// down middle
+
+        // only let player drop if pretty sure big enough platform exists to fall through
+        if (platL && platM && platR)
         {
-            rigidbody2D.linearVelocityX = 0;
+            canFall = true;
         }
 
         // jump
-        if (canJump && dir.y > 0)
+        if (isGrounded && dir.y > 0)
         {
-            rigidbody2D.linearVelocityY = dir.y * jumpSpeed;
-            canJump = false;
+            rigidbody2D.linearVelocityY = dir.y * JumpVelocity;
         }
 
-        if (dir.y < 0 && canFall)
+        // drop through platform
+        if (canFall && dir.y < 0)
         {
             FallDownPlatform();
         }
-
-        // increase gravity when falling/when down pressed
-        if ((rigidbody2D.linearVelocityY < 0 || dir.y < 0) && !canJump)
-        {
-            rigidbody2D.gravityScale = fallingGravity * (dir.y < 0 ? revJumpMult : 1);
-        }
-        else
-        {
-            rigidbody2D.gravityScale = gravity;
-        }
-    }
-
-    // on hitting the ground again then set can move true again
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        canJump = true;
-        canFall = true;
-    }
-
-    void OnCollisionExit2D(Collision2D other)
-    {
-        canFall = false;
     }
 
     void FallDownPlatform()
@@ -89,9 +122,8 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(seconds);
             col.enabled = true;
         }
-
-
-        StartCoroutine(DisableForSeconds(0.5f, GetComponent<Collider2D>()));
+        
+        StartCoroutine(DisableForSeconds(DropDisableTime, GetComponent<Collider2D>()));
 
 
 
@@ -165,5 +197,11 @@ public class PlayerController : MonoBehaviour
     //         yield return new WaitForSeconds(seconds);
     //         obj.enabled = true;
     //     }
+    // void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     isGrounded = true;
+    // void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     isGrounded = true;
     // }
 }
