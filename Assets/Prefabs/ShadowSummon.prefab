@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8872678512426375594
+--- !u!1001 &7428018581726693131
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,20 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5071573321978010328, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_Name
-      value: RangedEnemy
+      value: ShadowSummon
       objectReference: {fileID: 0}
-    - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 6102185849192144869, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6973191664251310759, guid: 79450ff695b3037419236555dd49391f, type: 3}
     - target: {fileID: 6534852540176966242, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -67,49 +59,10 @@ PrefabInstance:
     - target: {fileID: 7736797179570539481, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 0c61ed77a3488d845b73328fda2958ab, type: 2}
-    m_RemovedComponents:
-    - {fileID: 770713117876550474, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-    m_RemovedGameObjects: []
+      objectReference: {fileID: 9100000, guid: 6485d0257d894f844be0e4db2a4259a6, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4761472384639649481, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5071573321978010328, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8073020234419020042}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
---- !u!114 &297766693582200776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9152430593542358626, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-  m_PrefabInstance: {fileID: 8872678512426375594}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2cff1903de2f645b9d006b7316e89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &4414599693551698802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5071573321978010328, guid: f2d05be8d273cad48a09a3de30fb8cc5, type: 3}
-  m_PrefabInstance: {fileID: 8872678512426375594}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8073020234419020042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414599693551698802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460494dbc310b0343ab67aef8e2599bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  maxHP: 10
-  damage: 1
-  moveSpeed: 5
-  visionRadius: 3
-  attackCooldown: 1
-  view: {fileID: 297766693582200776}
-  shot: {fileID: 1904693862845694422, guid: d89fac3109b26194f972a5983f2052b4, type: 3}

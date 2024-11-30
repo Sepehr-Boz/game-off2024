@@ -4595,7 +4595,7 @@ GameObject:
   - component: {fileID: 2320223510189751510}
   - component: {fileID: 9096289967542562085}
   - component: {fileID: 4138411185402754299}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LevelTemplate
   m_TagString: Wall
   m_Icon: {fileID: 0}

@@ -168,7 +168,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3
+  m_Radius: 1
 --- !u!114 &9152430593542358626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   maxHP: 10
   damage: 1
   moveSpeed: 4
-  visionRadius: 5
+  visionRadius: 1
   attackCooldown: 0.05
   view: {fileID: 9152430593542358626}
 --- !u!95 &7736797179570539481

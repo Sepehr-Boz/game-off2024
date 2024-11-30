@@ -15,13 +15,12 @@ public class FlyingEnemyController : EnemyController
         if (view.player != null)
         {
             moveDir = view.player.transform.position - transform.position;
-            // GetComponent<Rigidbody2D>().AddForce(moveDir * 100 * moveSpeed * Time.deltaTime);
-            GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position +
-            (new Vector2(view.player.transform.position.x - transform.position.x, 0) * moveSpeed * Time.deltaTime));
+            GetComponent<Rigidbody2D>().MovePosition(
+                (transform.position + (view.player.transform.position - transform.position))
+            * moveSpeed * Time.deltaTime);
         }
         else
         {
-            // GetComponent<Rigidbody2D>().AddForce(moveDir * 100 * moveSpeed * Time.deltaTime);
             GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + (moveDir * moveSpeed * Time.deltaTime));
             // check if collided with a vertical wall, if so then change the x direction to the opposite
             // throw out raycast in the direction moving in to see if hit wall/about to hit wall
@@ -34,10 +33,10 @@ public class FlyingEnemyController : EnemyController
     protected override void ChangeDirection()
     {
         // throw out 4 new raycasts to see which direction then reverse the moveDir, ignore the enemies layer
-        RaycastHit2D upRay = Physics2D.Raycast((Vector2)transform.position, Vector2.up, 2f, LayerMask.NameToLayer("Enemy"));
-        RaycastHit2D downRay = Physics2D.Raycast((Vector2)transform.position, Vector2.down, 2f, LayerMask.NameToLayer("Enemy"));
-        RaycastHit2D leftRay = Physics2D.Raycast((Vector2)transform.position, Vector2.left, 2f, LayerMask.NameToLayer("Enemy"));
-        RaycastHit2D rightRay = Physics2D.Raycast((Vector2)transform.position, Vector2.right, 2f, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D upRay = Physics2D.Raycast((Vector2)transform.position, Vector2.up, 1.1f, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D downRay = Physics2D.Raycast((Vector2)transform.position, Vector2.down, 1.1f, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D leftRay = Physics2D.Raycast((Vector2)transform.position, Vector2.left, 1.1f, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D rightRay = Physics2D.Raycast((Vector2)transform.position, Vector2.right, 1.1f, LayerMask.NameToLayer("Enemy"));
         // Debug.DrawRay((Vector2)transform.position + Vector2.up, Vector2.up, Color.red);
         // Debug.DrawRay((Vector2)transform.position + Vector2.down, Vector2.down, Color.green);
         // Debug.DrawRay((Vector2)transform.position + Vector2.left, Vector2.left, Color.yellow);
@@ -68,7 +67,6 @@ public class FlyingEnemyController : EnemyController
     protected override void JumpBack()
     {
         GetComponent<Rigidbody2D>().AddForce(-moveDir * 25 * moveSpeed, ForceMode2D.Impulse);
-        // GetComponent<Rigidbody2D>().MovePosition(moveDir);
     }
 
     void OnCollisionEnter2D(Collision2D other)

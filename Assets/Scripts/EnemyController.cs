@@ -125,8 +125,8 @@ public class EnemyController : MonoBehaviour
     protected virtual void ChangeDirection()
     {
         RaycastHit2D rayHit = Physics2D.Raycast((Vector2)transform.position, moveDir, 1.1f, LayerMask.NameToLayer("Enemy"));
-        // print(rayHit.collider.gameObject.name);
-        Debug.DrawLine((Vector2)transform.position, (Vector2)transform.position + moveDir, Color.green, 0.1f);
+        print(rayHit.collider);
+        Debug.DrawLine((Vector2)transform.position, (Vector2)transform.position + (moveDir * 1.1f), Color.green, 0.1f);
 
         if (rayHit && rayHit.collider.CompareTag("Wall"))
         {
